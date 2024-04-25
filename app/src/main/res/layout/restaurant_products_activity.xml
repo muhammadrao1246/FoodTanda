@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightWhiteButton"
+    tools:context=".RestaurantProductsActivity">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <FrameLayout
+            android:id="@+id/restaurantProductsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+        </FrameLayout>
+
+        <!--            <fragment-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:name="com.example.fooddeliveryapp.Fragments.RestaurantProductsFragment"-->
+        <!--                tools:layout="@layout/fragment_restaurant_products"-->
+        <!--                tools:ignore="Instantiatable"-->
+        <!--                /> -->
+            </androidx.core.widget.NestedScrollView>
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#41000000"
+                android:fitsSystemWindows="true"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
+                app:liftOnScroll="true"
+                >
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/topAppBar_RestaurantProducts"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    app:popupTheme="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
+
+
+                    app:titleTextAppearance="@style/TextAppearance.Material3.TitleMedium"
+                    app:title=""
+                    app:titleTextColor="@color/lightWhiteButton"
+                    app:titleCentered="true"
+
+                    app:navigationIcon="@drawable/navigation_back"
+                    app:navigationIconTint="@color/lightWhiteButton"
+
+                    />
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/restaurantProductSelectedContainer"
+        style="@style/Widget.Material3.BottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/lightWhiteButton"
+        app:behavior_hideable="true"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+                android:id="@+id/restaurantProductDragHandle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                />
+            <LinearLayout
+                android:layout_below="@id/restaurantProductDragHandle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Boattom Shet"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

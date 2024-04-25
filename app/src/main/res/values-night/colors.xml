@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    BUTTONS COLORS AND OUTLINE COLORS -->
+    <color name="lightBlackButton">#EFF3F3</color>
+    <color name="lightWhiteButton">#4C4B4B</color>
+
+    <!--    TEXT COLORS     -->
+    <color name="welcome_heading">@color/lightBlackButton</color>
+</resources>

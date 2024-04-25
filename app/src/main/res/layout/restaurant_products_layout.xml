@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="10dp"
+        >
+        <TextView
+            android:id="@+id/restaurantsProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:gravity="start"
+            android:text="Cheese Burger"
+            android:textAlignment="viewStart"
+            android:textColor="@color/cardview_dark_background"
+            android:textFontWeight="700"
+            android:textSize="16dp"
+            android:translationZ="10dp" />
+
+        <TextView
+            android:id="@+id/restaurantsProductDescription"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/restaurantsProductName"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="12dp"
+            android:layout_toStartOf="@+id/shimmerRestaurantImageContainer"
+            android:fontFamily="sans-serif"
+            android:gravity="start"
+            android:text="One signature crispy dynamite burger"
+            android:textAlignment="viewStart"
+            android:textColor="#8A8989"
+            android:textSize="14dp" />
+        <TextView
+            android:id="@+id/restaurantsProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/restaurantsProductDescription"
+            android:fontFamily="sans-serif-thin"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:text="Rs. 15,500.00"
+            android:textAlignment="viewStart"
+            android:textColor="@color/cardview_dark_background"
+            android:textFontWeight="400"
+            android:textSize="14dp"
+            android:translationZ="10dp" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shimmerRestaurantImageContainer"
+            android:layout_alignParentEnd="true"
+            app:cardCornerRadius="10dp"
+            >
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/shimmerRestaurantProduct"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/restaurantsProductImage"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:background="#dddddd"
+                        android:adjustViewBounds="true"
+
+                        />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        app:dividerColor="#8A8989"
+        />
+</LinearLayout>

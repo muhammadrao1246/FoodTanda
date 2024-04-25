@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Welcome_Page"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/langChange"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/language"
+                    android:layout_margin="20dp"
+                    android:padding="15dp"
+                    android:translationZ="1dp"
+                    android:requiresFadingEdge="vertical"
+                    android:background="#CC191C1E"
+                    android:contentDescription="Change Language" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:cropToPadding="true"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/accounts_page" />
+            </RelativeLayout>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/welcome"
+                android:letterSpacing="0.05"
+                android:layout_marginHorizontal="30dp"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:textColor="@color/welcome_heading"
+                android:textFontWeight="1000"
+                android:lineHeight="40dp"
+                android:textAlignment="viewStart"
+                android:shadowColor="@color/cardview_shadow_end_color"
+                app:fontFamily="@font/merriweather_sans" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_gravity="end|bottom"
+                android:paddingBottom="30dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/routeToSignIn"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/routeToSignUp"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="sans-serif-light"
+                    android:letterSpacing="0.05"
+                    android:padding="15dp"
+                    android:text="Sign In"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lightBlackButton"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:cornerRadius="@dimen/base_button_radius" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/routeToSignUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_above="@id/welcome_top_buttons_divider"
+                    android:backgroundTint="@color/lightBlackButton"
+                    android:fontFamily="sans-serif-light"
+                    android:letterSpacing="0.05"
+                    android:padding="15dp"
+                    android:text="Sign Up"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lightWhiteButton"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/lightBlackButton"
+                    app:cornerRadius="@dimen/base_button_radius" />
+
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/welcome_top_buttons_divider"
+                    style="?attr/materialDividerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_above="@id/routeToGoogleSignIn"
+                    android:layout_marginVertical="20dp"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/routeToGoogleSignIn"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="sans-serif-light"
+                    android:letterSpacing="0.05"
+                    android:padding="15dp"
+                    android:text="Continue with Google"
+                    android:textAllCaps="false"
+                    android:textColor="@color/lightBlackButton"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/google_icon"
+                    app:iconSize="32dp"
+                    app:cornerRadius="@dimen/base_button_radius" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

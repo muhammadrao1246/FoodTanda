@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">FoodTanda</string>
+    <string name="crispKey">b82a5734-6e40-4c43-8365-8e4ab6ac91b9</string>
+
+
+    <!--        CONFIGURATION STRINGS-->
+    <string name="dialogCancel">Cancel</string>
+    <string name="dialogSelect">Select</string>
+    <string name="selectLanguage">Select Language</string>
+    <string name="openDrawer">Open Dashboard Drawer</string>
+    <string name="closeDrawer">Close Dashboard Drawer</string>
+
+    <!--    LANGUAUGE NAMES -->
+    <string name="langEnglish">English</string>
+    <string name="langUrdu">Urdu</string>
+    <!--    WELCOME ACTIVITY STRING-->
+    <string name="welcome">Welcome To FoodTanda</string>
+    <string name="signin_button">Sign In</string>
+    <string name="signup_button">Sign Up</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

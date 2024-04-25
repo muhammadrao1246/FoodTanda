@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:text="No Items Found"
+    android:textSize="16dp"
+    android:padding="10dp"
+    android:fontFamily="sans-serif"
+    app:drawableStartCompat="@drawable/search_icon"
+    app:drawableTint="@color/cardview_dark_background"
+    android:drawablePadding="10dp"
+    />

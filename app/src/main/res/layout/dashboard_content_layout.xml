@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lightWhiteButton"
+    >
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/shopping_cart"
+        app:iconTint="@color/lightWhiteButton"
+        app:iconSize="40dp"
+        app:iconPadding="0dp"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="20dp"
+        android:text="0"
+        android:textSize="12dp"
+        android:gravity="bottom"
+        android:translationZ="1000dp"
+        android:padding="15dp"
+        android:textColor="@color/lightWhiteButton"
+        android:backgroundTint="@color/welcome_heading"
+        app:elevation="100dp"
+        android:elevation="100dp"
+        app:cornerRadius="20dp"
+        />
+
+
+
+
+    <!--    ENABLING SCROLLING FOR APP -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        <!--        ALL CONTENT GOES HERE BELOW -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="20dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/welcome_dashboard_section_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_toEndOf="@id/welcome_dashboard_section_1_image"
+                        android:orientation="vertical"
+                        android:paddingStart="10dp">
+
+                        <TextView
+                            style="@style/TextAppearance.Material3.TitleMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/merriweather_sans"
+                            android:text="Hoorah! Welcome Back!"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/welcome_heading"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/welcome_description"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="10dp"
+                            android:text="Wanna try more food? Order Now!"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/welcome_heading"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/welcome_dashboard_section_1_image"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/welcome_cheff"
+                        />
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cardview_light_background"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="viewStart"
+                        android:text="Restaurants"
+                        android:textSize="16dp"
+                        android:textColor="@color/lightBlackButton"
+                        android:fontFamily="@font/merriweather_sans"
+                        android:textFontWeight="700"
+                        />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/dashboardRestaurantsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:scrollbarSize="0dp"
+                        />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardview_light_background"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="viewStart"
+                    android:text="Cuisines"
+                    android:textSize="16dp"
+                    android:textColor="@color/lightBlackButton"
+                    android:fontFamily="@font/merriweather_sans"
+                    android:textFontWeight="700"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/dashboardCuisinesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:scrollbarSize="0dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/welcome_heading"
+        android:fitsSystemWindows="true"
+        android:translationZ="5dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
+        app:liftOnScroll="true"
+        >
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar_Dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:elevation="4dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_scrollFlags="scroll|noScroll"
+
+                app:titleTextAppearance="@style/TextAppearance.Material3.ActionBar.Title"
+                app:title="Dashboard"
+                app:titleTextColor="@color/lightWhiteButton"
+
+                app:navigationIcon="@drawable/navigation_drawer"
+                app:navigationIconTint="@color/lightWhiteButton"
+
+                app:menu="@menu/toolbar_menu"
+
+                />
+            <com.google.android.material.search.SearchBar
+                android:id="@+id/topSearchBar_Dashboard"
+                style="@style/TextAppearance.Material3.SearchBar"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:popupTheme="@style/ThemeOverlay.Material3.Search"
+                android:hint="Search your favourite food now"
+
+                />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <com.google.android.material.search.SearchView
+        android:id="@+id/dashboardSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:queryBackground="@color/lightWhiteButton"
+        app:submitBackground="@color/lightWhiteButton"
+        android:hint="Search your favourite food now"
+        app:layout_anchor="@id/topSearchBar_Dashboard">
+        <!-- Search suggestions/results go here (ScrollView, RecyclerView, etc.). -->
+        <ViewSwitcher
+            android:id="@+id/searchViewManager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            >
+
+            <ListView
+                android:id="@+id/searchOptionsList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchResultContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </ViewSwitcher>
+    </com.google.android.material.search.SearchView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

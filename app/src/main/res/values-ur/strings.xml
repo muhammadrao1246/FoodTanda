@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    LANGUAUGE NAMES -->
+    <string name="langEnglish">انگریزی</string>
+    <string name="langUrdu">اردو</string>
+
+    <!--    WELCOME ACTIVITY STRING-->
+    <string name="welcome">فوڈ ٹانڈے میں خوش آمدید</string>
+    <string name="signin_button">سائن ان</string>
+    <string name="signup_button">سائن اپ</string>
+</resources>

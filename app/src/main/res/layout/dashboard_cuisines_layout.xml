@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:id="@+id/cuisineHeadImageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/shimmerDashboardCuisines"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="5dp"
+                    app:cardBackgroundColor="#F6FFEB"
+                    >
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/cuisineHeadImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="75dp"
+                        android:scaleType="centerCrop"
+                        android:background="#dddddd"
+                        android:padding="10dp"
+                        android:adjustViewBounds="true"
+                        />
+                </androidx.cardview.widget.CardView>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/cuisineHeadImageContainer"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/cuisineNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="BBQ"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textColor="@color/cardview_dark_background"
+                android:textFontWeight="400"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

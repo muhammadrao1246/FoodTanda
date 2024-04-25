@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+    <item
+        android:title="Main">
+        <menu>
+            <item
+                android:id="@+id/header_profile"
+                android:icon="@drawable/username"
+                android:title="Profile"
+                android:checkable="true"
+                app:showAsAction="ifRoom"
+                />
+            <item
+                android:id="@+id/header_notifications"
+                android:icon="@drawable/notifications"
+                android:title="Notifications"
+                android:checkable="true"
+                app:showAsAction="ifRoom"
+                />
+            <item
+                android:id="@+id/header_history"
+                android:icon="@drawable/shopping_cart"
+                android:title="History"
+                android:checkable="true"
+                app:showAsAction="ifRoom"
+                />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/header_settings"
+        android:title="Settings"
+        android:checkable="true"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/header_terms_and_conditions"
+        android:title="Terms &amp; Conditions / Privacy"
+        android:checkable="true"
+        app:showAsAction="ifRoom"
+        />
+    <item
+        android:id="@+id/header_customer_support"
+        android:title="Customer Support"
+        android:checkable="true"
+        app:showAsAction="ifRoom"
+        />
+</menu>

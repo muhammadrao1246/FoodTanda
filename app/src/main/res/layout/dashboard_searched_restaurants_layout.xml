@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/restaurantCardContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="15dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:id="@+id/restaurantHeadImageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/restaurantTotalDeliveryTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/shimmerDashboardRestaurant"
+                android:translationZ="5dp"
+                android:layout_margin="10dp"
+                android:text="30 min"
+                android:textSize="10dp"
+                android:textColor="@color/lightWhiteButton"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="3dp"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/search_bar_rounded"
+                />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/shimmerDashboardRestaurant"
+                >
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/restaurantHeadImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:background="#dddddd"
+                    android:adjustViewBounds="true"
+                    />
+            </com.facebook.shimmer.ShimmerFrameLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/restaurantHeadImageContainer"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+            <TextView
+                android:id="@+id/restaurantNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="California BBQ - Blue Area"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                android:textSize="16dp"
+                android:textColor="@color/cardview_dark_background"
+                android:textFontWeight="500"
+                />
+
+            <TextView
+                android:id="@+id/restaurantFoodCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/restaurantNameText"
+                android:layout_marginTop="3dp"
+                android:fontFamily="sans-serif"
+                android:text="$$$ · Fast Food, Pizza, Burgers"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                android:textSize="14dp"
+                android:textColor="#8A8989"
+                android:textFontWeight="500"
+                />
+
+            <TextView
+                android:id="@+id/restaurantEstimatedDeliveryPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/restaurantFoodCategories"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="PKR 89 delivery"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                android:textSize="12dp"
+                android:textColor="@color/cardview_dark_background"
+                android:textFontWeight="500"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

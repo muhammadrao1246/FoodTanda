@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    BASE SETTINGS FOR CONFIGURATION-->
+    <dimen name="base_button_radius">10dp</dimen>
+
+</resources>
